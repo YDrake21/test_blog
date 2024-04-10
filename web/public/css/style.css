@@ -70,7 +70,7 @@ ul {
     margin: 0;
 }
 
-.media .media-left{
+.media .media-left {
     float: left;
 }
 
@@ -145,10 +145,12 @@ header
 .main-menu .navbar-nav > li a:focus {
     color: #00BFF3;
 }
-.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover {
     color: #00BFF3;
     background-color: transparent;
 }
+
 .i_con a i:hover {
     color: #00BFF3;
 
@@ -194,7 +196,7 @@ header
     border: 0;
 }
 
-.main-menu ul ul a:hover, .main-menu ul ul ul li a:hover{
+.main-menu ul ul a:hover, .main-menu ul ul ul li a:hover {
     background: #00BFF3;
     color: #fff !important;
 }
@@ -1474,9 +1476,11 @@ about me
     -o-transition: width .6s ease;
     transition: width .6s ease;
 }
+
 h3.bar-heading.text-uppercase {
     padding: 0 0 10px;
 }
+
 /*======
 about us one
 ========*/
@@ -1493,7 +1497,8 @@ about us one
 .ml30 {
     margin-left: 30px;
 }
-.mr0{
+
+.mr0 {
     margin-top: 0 !important;
 }
 
@@ -1583,6 +1588,7 @@ header two
     z-index: -1;
     content: "";
 }
+
 /* 404 page */
 .st-content {
     margin: 50px 0 50px;

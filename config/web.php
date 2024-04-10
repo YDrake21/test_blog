@@ -9,7 +9,7 @@ $config = [
     'bootstrap' => ['log'],
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
-        '@npm'   => '@vendor/npm-asset',
+        '@npm' => '@vendor/npm-asset',
     ],
     'components' => [
         'request' => [
@@ -22,7 +22,7 @@ $config = [
         'user' => [
             'identityClass' => 'app\models\User',
             'enableAutoLogin' => true,
-            'loginUrl'=>['auth/login']
+            'loginUrl' => ['auth/login']
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
@@ -52,9 +52,9 @@ $config = [
         ],
 
     ],
-        'modules' => [
-            'admin' => [
-                'class' => 'app\modules\admin\Module',
+    'modules' => [
+        'admin' => [
+            'class' => 'app\modules\admin\Module',
         ],
     ],
     'params' => $params,

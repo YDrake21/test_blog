@@ -51,6 +51,6 @@ class Tag extends \yii\db\ActiveRecord
     public function getArticles()
     {
         return $this->hasMany(Article::class, ['id' => 'article_id'])
-            ->viaTable('article_tag', ['tag_id'=>'id']);
+            ->viaTable('article_tag', ['tag_id' => 'id']);
     }
 }

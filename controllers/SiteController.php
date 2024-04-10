@@ -69,14 +69,15 @@ class SiteController extends Controller
         $recent = Article::getRecent();
         $categories = Category::getAll();
 
-        return $this->render('index',[
-            'articles'=>$data['articles'],
-            'pagination'=>$data['pagination'],
-            'popular'=>$popular,
-            'recent'=>$recent,
-            'categories'=>$categories
+        return $this->render('index', [
+            'articles' => $data['articles'],
+            'pagination' => $data['pagination'],
+            'popular' => $popular,
+            'recent' => $recent,
+            'categories' => $categories
         ]);
     }
+
     public function actionView($id)
     {
         $article = Article::findOne($id);
@@ -84,11 +85,11 @@ class SiteController extends Controller
         $recent = Article::getRecent();
         $categories = Category::getAll();
 
-        return $this->render('single',[
-            'article'=>$article,
-            'popular'=>$popular,
-            'recent'=>$recent,
-            'categories'=>$categories
+        return $this->render('single', [
+            'article' => $article,
+            'popular' => $popular,
+            'recent' => $recent,
+            'categories' => $categories
         ]);
     }
 
@@ -99,12 +100,12 @@ class SiteController extends Controller
         $recent = Article::getRecent();
         $categories = Category::getAll();
 
-        return $this->render('category',[
-            'articles'=>$data['articles'],
-            'pagination'=>$data['pagination'],
-            'popular'=>$popular,
-            'recent'=>$recent,
-            'categories'=>$categories
+        return $this->render('category', [
+            'articles' => $data['articles'],
+            'pagination' => $data['pagination'],
+            'popular' => $popular,
+            'recent' => $recent,
+            'categories' => $categories
 
         ]);
     }

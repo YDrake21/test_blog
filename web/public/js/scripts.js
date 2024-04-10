@@ -14,7 +14,6 @@
     }());
 
 
-
     /*=== single blog carousel =====*/
     (function () {
         $('.items').owlCarousel({
@@ -65,8 +64,6 @@
             $('.top-search a').toggleClass('sactive');
         });
     }());
-
-
 
 
 })(jQuery);

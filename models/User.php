@@ -30,7 +30,6 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
     }
 
 
-
     /**
      * {@inheritdoc}
      */
@@ -69,7 +68,7 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
 
     public static function findByEmail($email)
     {
-        return User::find()->where(['email'=>$email])->one();
+        return User::find()->where(['email' => $email])->one();
     }
 
     public function validatePassword($password)

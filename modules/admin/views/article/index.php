@@ -35,11 +35,11 @@ $this->params['breadcrumbs'][] = $this->title;
             'content:ntext',
             'date',
             [
-              'format' => 'html',
+                'format' => 'html',
                 'label' => 'Image',
-            'value' => function($data){
-            return Html::img($data->getImage(),  ['width'=>200]);
-            }
+                'value' => function ($data) {
+                    return Html::img($data->getImage(), ['width' => 200]);
+                }
             ],
 
 
@@ -52,7 +52,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'class' => ActionColumn::className(),
                 'urlCreator' => function ($action, Article $model, $key, $index, $column) {
                     return Url::toRoute([$action, 'id' => $model->id]);
-                 }
+                }
             ],
         ],
     ]); ?>

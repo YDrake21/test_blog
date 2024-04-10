@@ -51,12 +51,14 @@
         width: 100%;
         text-align: center;
     }
+
     .i_con a i {
         font-size: 15px;
         padding: 0 5px 10px;
         color: #AAAAAA;
         line-height: 35px;
     }
+
     .show-search {
         top: 100%;
         right: 9%;

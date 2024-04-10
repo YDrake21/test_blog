@@ -1,4 +1,5 @@
 <?php
+
 namespace app\controllers;
 
 use app\models\LoginForm;
@@ -36,19 +37,18 @@ class AuthController extends Controller
         return $this->goHome();
     }
 
-public function actionSignup()
-{
-    $model = new SignupForm();
-    if(Yii::$app->request->isPost)
+    public function actionSignup()
     {
-        $model->load(Yii::$app->request->post());
-        if($model->signup()) {
-            return $this->redirect(['site/index']);
+        $model = new SignupForm();
+        if (Yii::$app->request->isPost) {
+            $model->load(Yii::$app->request->post());
+            if ($model->signup()) {
+                return $this->redirect(['site/index']);
+            }
         }
-    }
 
-    return $this->render('signup', ['model'=>$model]);
-}
+        return $this->render('signup', ['model' => $model]);
+    }
 
 
     public function actionTest()
@@ -57,12 +57,9 @@ public function actionSignup()
 
         Yii::$app->user->logout();
 
-        if(Yii::$app->user->isGuest)
-        {
+        if (Yii::$app->user->isGuest) {
             echo 'Пользователь гость';
-        }
-        else
-        {
+        } else {
             echo 'Пользователь Авторизован';
         }
     }

@@ -1,16 +1,16 @@
 /**
-* Project: Bootstrap Hover Dropdown
-* Author: Cameron Spear
-* Contributors: Mattia Larentis
-*
-* Dependencies: Bootstrap's Dropdown plugin, jQuery
-*
-* A simple plugin to enable Bootstrap dropdowns to active on hover and provide a nice user experience.
-*
-* License: MIT
-*
-* http://cameronspear.com/blog/bootstrap-dropdown-on-hover-plugin/
-*/
+ * Project: Bootstrap Hover Dropdown
+ * Author: Cameron Spear
+ * Contributors: Mattia Larentis
+ *
+ * Dependencies: Bootstrap's Dropdown plugin, jQuery
+ *
+ * A simple plugin to enable Bootstrap dropdowns to active on hover and provide a nice user experience.
+ *
+ * License: MIT
+ *
+ * http://cameronspear.com/blog/bootstrap-dropdown-on-hover-plugin/
+ */
 ;(function ($, window, undefined) {
     // outside the scope of the jQuery plugin to
     // keep track of all dropdowns
@@ -21,7 +21,7 @@
     $.fn.dropdownHover = function (options) {
         // don't do anything if touch is supported
         // (plugin causes some issues on mobile)
-        if('ontouchstart' in document) return this; // don't want to affect chaining
+        if ('ontouchstart' in document) return this; // don't want to affect chaining
 
         // the element we really care about
         // is the dropdown-toggle's parent
@@ -47,7 +47,7 @@
 
             $parent.hover(function (event) {
                 // so a neighbor can't open the dropdown
-                if(!$parent.hasClass('open') && !$this.is(event.target)) {
+                if (!$parent.hasClass('open') && !$this.is(event.target)) {
                     // stop this event, stop executing any code
                     // in this callback but continue to propagate
                     return true;
@@ -55,7 +55,7 @@
 
                 $allDropdowns.find(':focus').blur();
 
-                if(settings.instantlyCloseOthers === true)
+                if (settings.instantlyCloseOthers === true)
                     $allDropdowns.removeClass('open');
 
                 window.clearTimeout(timeout);
@@ -72,7 +72,7 @@
             $this.hover(function () {
                 $allDropdowns.find(':focus').blur();
 
-                if(settings.instantlyCloseOthers === true)
+                if (settings.instantlyCloseOthers === true)
                     $allDropdowns.removeClass('open');
 
                 window.clearTimeout(timeout);
@@ -81,7 +81,7 @@
             });
 
             // handle submenus
-            $parent.find('.dropdown-submenu').each(function (){
+            $parent.find('.dropdown-submenu').each(function () {
                 var $this = $(this);
                 var subTimeout;
                 $this.hover(function () {
@@ -103,8 +103,8 @@
         // apply dropdownHover to all elements with the data-hover="dropdown" attribute
         $('[data-hover="dropdown"]').dropdownHover();
     });
-	$('.dropdown-toggle').dropdownHover().dropdown();
-		$(document).on('click', '.yamm .dropdown-menu', function(e) {
-		e.stopPropagation()
-	})
+    $('.dropdown-toggle').dropdownHover().dropdown();
+    $(document).on('click', '.yamm .dropdown-menu', function (e) {
+        e.stopPropagation()
+    })
 })(jQuery, this);

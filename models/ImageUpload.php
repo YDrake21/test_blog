@@ -6,7 +6,8 @@ use Yii;
 use yii\base\Model;
 use yii\web\UploadedFile;
 
-class ImageUpload extends Model{
+class ImageUpload extends Model
+{
 
     public $image;
 
@@ -23,8 +24,7 @@ class ImageUpload extends Model{
     {
         $this->image = $file;
 
-        if($this->validate())
-        {
+        if ($this->validate()) {
             $this->deleteCurrentImage($currentImage);
             return $this->saveImage();
         }
@@ -43,16 +43,14 @@ class ImageUpload extends Model{
 
     public function deleteCurrentImage($currentImage)
     {
-        if($this->fileExists($currentImage))
-        {
+        if ($this->fileExists($currentImage)) {
             unlink($this->getFolder() . $currentImage);
         }
     }
 
     public function fileExists($currentImage)
     {
-        if(!empty($currentImage) && $currentImage != null)
-        {
+        if (!empty($currentImage) && $currentImage != null) {
             return file_exists($this->getFolder() . $currentImage);
         }
     }

@@ -1,6 +1,7 @@
 <?php
 
 /** @var yii\web\View $this */
+
 /** @var string $content */
 
 use app\assets\AppAsset;
@@ -56,17 +57,17 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                 </ul>
                 <div class="i_con">
                     <ul class="nav navbar-nav text-uppercase">
-                        <?php if(Yii::$app->user->isGuest):?>
-                            <li><a href="<?= Url::toRoute(['auth/login'])?>">Login</a></li>
-                            <li><a href="<?= Url::toRoute(['auth/signup'])?>">Register</a></li>
+                        <?php if (Yii::$app->user->isGuest): ?>
+                            <li><a href="<?= Url::toRoute(['auth/login']) ?>">Login</a></li>
+                            <li><a href="<?= Url::toRoute(['auth/signup']) ?>">Register</a></li>
                         <?php else: ?>
                             <?= Html::beginForm(['/auth/logout'], 'post')
                             . Html::submitButton(
                                 'Logout (' . Yii::$app->user->identity->name . ')',
-                                ['class' => 'btn btn-link logout', 'style'=>"padding-top:10px;"]
+                                ['class' => 'btn btn-link logout', 'style' => "padding-top:10px;"]
                             )
                             . Html::endForm() ?>
-                        <?php endif;?>
+                        <?php endif; ?>
                     </ul>
                 </div>
 
@@ -78,7 +79,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
 </nav>
 
 
-<?=$content?>
+<?= $content ?>
 
 
 <footer class="footer-widget-section">

@@ -60,13 +60,13 @@ class Category extends \yii\db\ActiveRecord
     public static function getArticlesByCategory($id)
     {
         // build a DB query to get all articles
-        $query = Article::find()->where(['category_id'=>$id]);
+        $query = Article::find()->where(['category_id' => $id]);
 
         // get the total number of articles (but do not fetch the article data yet)
         $count = $query->count();
 
         // create a pagination object with the total count
-        $pagination = new Pagination(['totalCount' => $count, 'pageSize'=>6]);
+        $pagination = new Pagination(['totalCount' => $count, 'pageSize' => 6]);
 
         // limit the query using the pagination and retrieve the articles
         $articles = $query->offset($pagination->offset)
